@@ -5,8 +5,8 @@
 ---
 
 ## 🚀 Features
-
-- 🔍 Search for recipes by ingredients or name
+- 🔐 User authentication with Firebase Auth
+- 🔍 Search for recipes by ingredients
 - 🍽️ View detailed recipe instructions and ingredients
 - ❤️ Save favorite recipes locally
 - 🌐 Fully integrated with the Spoonacular API
