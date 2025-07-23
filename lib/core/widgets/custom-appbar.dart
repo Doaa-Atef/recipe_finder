@@ -30,7 +30,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(
         titleKey,
         style: GoogleFonts.cairo(
-          fontSize: 25.sp,
+          fontSize: 28.sp,
           fontWeight: FontWeight.bold,
           color: AppColors.offWhite,
         ),

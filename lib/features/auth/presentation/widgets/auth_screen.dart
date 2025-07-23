@@ -22,12 +22,21 @@ class AuthScreen extends StatelessWidget {
         padding: EdgeInsets.all(16.w),
         child: Form(
           key: formKey,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(height: 150.h),
-                ...children,
-              ],
+          child: Center(
+            child: SingleChildScrollView(
+              child: Column(
+                // mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/images/chef.png',
+                    height: 100,
+                    width:100,
+                  ),
+                  SizedBox(height: 20.h),
+                  // SizedBox(height: 150.h),
+                  ...children,
+                ],
+              ),
             ),
           ),
         ),

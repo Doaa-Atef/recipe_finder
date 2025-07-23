@@ -21,9 +21,15 @@ class AuthCubit extends Cubit<AuthState> {
       emit(AuthSuccess(user));
 
     } catch (e) {
-      emit(AuthFailure(e.toString()));
+      if (e is FirebaseAuthException) {
+        emit(AuthFailure(e.message ?? "Something went wrong"));
+      } else {
+        emit(AuthFailure("An error occurred"));
+      }
     }
   }
+
+
 
   void register(String email, String password, String name) async {
     emit(AuthLoading());

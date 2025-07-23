@@ -85,6 +85,7 @@ flutter:
   assets:
      - assets/AClUXpg6Pt.json
      - assets/Animation-donut.json
+     - assets/images/chef.png
      - .env
 
 

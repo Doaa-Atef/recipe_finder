@@ -30,9 +30,10 @@ class RecipeModel {
     return RecipeModel(
       id: json['id'] ?? 0,
       title: json['title'] ?? 'No title',
-      image:
-          json['image'] ??
-          'https://images.unsplash.com/photo-1639856571053-9d5b39b2362b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      image: (json['image'] as String?)?.isNotEmpty == true
+          ? json['image']
+          :  'https://images.unsplash.com/photo-1639856571053-9d5b39b2362b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+
       readyInMinutes: json['readyInMinutes'] ?? 0,
       servings: json['servings'] ?? 0,
       sourceUrl: json['sourceUrl'] ?? '',

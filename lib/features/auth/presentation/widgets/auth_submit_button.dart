@@ -32,7 +32,8 @@ class AuthSubmitButton extends StatelessWidget {
       child: Text(
         title,
         style: TextStyle(
-          fontSize: 16.sp,
+          fontWeight: FontWeight.bold,
+          fontSize: 20.sp,
           color: AppColors.offWhite,
         ),
       ),

@@ -53,7 +53,16 @@ class RecipeItem extends StatelessWidget {
                       height: 150.h,
                       width: double.infinity,
                       fit: BoxFit.cover,
-                    ),
+                      errorBuilder: (context, error, stackTrace) {
+                        return Image.network(
+                          'https://images.unsplash.com/photo-1639856571053-9d5b39b2362b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                          height: 150.h,
+                          width: double.infinity,
+                          fit: BoxFit.cover,
+                        );
+                      },
+                    )
+
                   ),
                   Padding(
                     padding: EdgeInsets.only(top: 4.h, right: 4.w),

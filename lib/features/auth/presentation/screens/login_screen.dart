@@ -38,6 +38,16 @@ class _LoginScreenState extends State<LoginScreen> {
         titleKey: "Login",
         formKey: _formKey,
         children: [
+          Text(
+            "Login To Continue...",
+            style: TextStyle(
+              color: AppColors.primaryColor,
+              fontSize: 25.sp,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(height: 20.h),
+
           AuthTextFormField(
             controller: emailController,
             hintText: "Email",
@@ -77,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () => Navigator.pushReplacementNamed(context, Routes.register),
                 child: Text(
                   "Sign Up",
-                  style: TextStyle(color: AppColors.secondaryColor, fontWeight: FontWeight.bold),
+                  style: TextStyle(color: AppColors.secondaryColor, fontWeight: FontWeight.bold,fontSize: 14.sp),
                 ),
               ),
             ],

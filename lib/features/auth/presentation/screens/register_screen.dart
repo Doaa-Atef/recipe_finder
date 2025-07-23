@@ -49,9 +49,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
         },
         builder: (context, state) {
           return AuthScreen(
-            titleKey: "Sign Up",
+            titleKey: "Register",
             formKey: _formKey,
             children: [
+
+              Text(
+                "Register Now...",
+                style: TextStyle(
+                  color: AppColors.primaryColor,
+                  fontSize: 25.sp,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 20.h),
+
               AuthTextFormField(
                 controller: nameController,
                 hintText: "Name",
@@ -89,11 +100,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   }
                 },
               ),
-              SizedBox(height: 16.h),
+              // SizedBox(height: 16.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Already have an account? "),
+                  Text("Already have an account? ",style: TextStyle(fontSize: 14.sp),),
                   TextButton(
                     onPressed: () {
                       Navigator.pushReplacementNamed(context, Routes.login);
@@ -101,13 +112,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     child: Text(
                       "Login",
                       style: TextStyle(
+                        fontSize: 14.sp,
                         color: AppColors.secondaryColor,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           );
         },
